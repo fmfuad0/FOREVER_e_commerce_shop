@@ -11,7 +11,7 @@ function Orders(props) {
     useEffect(()=>{
         const getData = async () => {
             let c=[];
-            const res = await fetch(`http://localhost:3000/get-orders`, {
+            const res = await fetch(`https://forever-e-commerce-shop.onrender.com/get-orders`, {
                 method: "GET",
                 headers: {
                     "Accept": "application/json",
