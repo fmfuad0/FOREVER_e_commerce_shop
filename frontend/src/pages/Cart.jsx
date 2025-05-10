@@ -37,7 +37,7 @@ function Cart(props) {
                 {cartData.map((item, index) => {
                     const productData = products.find((product) => item._id === product._id)
                     return(
-                        <div className={`font-semibold py-4 border-t border-b text-gray-700 grid grid-cols-[3fr_2fr_1fr] items-center gap-4`}>
+                        <div className={`font-semibold py-4 border-t border-b text-gray-700 grid grid-cols-[3fr_2fr_1fr] items-center gap-4 sm:grid-rows-1`}>
                             <div className="flex items-start gap-6">
                                 <img className={`max-w-13 sm:w-20`} src={productData.image[0]} />
                                 <div>
@@ -57,7 +57,7 @@ function Cart(props) {
             {(getCartTotal()>0)?
                 <div className={`flex justify-end my-10`}>
                     <div className="w-full sm:w-[350px]">
-                        <CartTotal/>
+                        <CartTotal text1={"AMOUNT"} text2={"TO PAY"}/>
                         <div className={`w-full text-end`}>
                             <button onClick={()=>navigate("/place-order")} className={`bg-black text-white text-sm my-8 px-8 py-3 hover:bg-slate-600 transition ease-in-out cursor-pointer`}>PROCEED TO CHECKOUT</button>
 

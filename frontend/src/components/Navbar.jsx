@@ -65,7 +65,7 @@ function Navbar(props) {
                         <p className={``}>BACK</p>
                     </div>
                     <NavLink onClick={()=>setVisible(false)} className={`py-2 pl-6 border text-left w-2/4`} to={`/`}>HOME</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className={`py-2 pl-6 border  text-left w-2/4`} to={`/collection`}>COLLECTION</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className={`py-2 pl-6 border  text-left w-2/4`} to={`/collections`}>COLLECTION</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className={`py-2 pl-6 border text-left w-2/4`} to={`/about`}>ABOUT</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className={`py-2 pl-6 border text-left w-2/4`} to={`/contact`}>CONTACT</NavLink>
                 </div>

@@ -1,10 +1,8 @@
 import {createContext, useEffect, useState} from "react";
 import {products} from "../assets/assets.js";
-import cart from "../pages/Cart.jsx";
 import {toast} from "react-toastify";
 import {useNavigate} from "react-router-dom";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const ShopContext = createContext({});
 
 const ShopContextProvider = (props) => {
@@ -13,6 +11,7 @@ const ShopContextProvider = (props) => {
     const deliveryFee = 10
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({"aaaac": { "L": 1, "XL": 1, "S": 1 }});
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
     const navigate = useNavigate();
     const addToCart = (itemId, size) => {
         if(!size){
@@ -69,7 +68,7 @@ const ShopContextProvider = (props) => {
 
 
     const value={
-        products,currency,deliveryFee,showSearch, setShowSearch, cartItems, addToCart, getCartCount, updateQuantity, getCartTotal,navigate
+        products,currency,deliveryFee,showSearch, setShowSearch, cartItems, addToCart, getCartCount, updateQuantity, getCartTotal,navigate, isLoggedIn, setIsLoggedIn
     }
     return (
         <ShopContext.Provider value={value}>

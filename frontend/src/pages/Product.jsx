@@ -55,7 +55,7 @@ function Product(props) {
                         <p>Select Size</p>
                         <div className={`flex gap-2`}>
                             {productData.sizes.map((item, index)=>{
-                                return (<button className={`border py-2 px-4 bg-gray-100 cursor-pointer ${(item===size)? "border-orange-500 border-2 rounded" : ""}`} key={index} onClick={()=>setSize(item)} >{item}</button>)
+                                return (<button className={`border py-2 px-4 bg-gray-100 cursor-pointer ${(item===size)? "border-orange-500 bg-orange-200 border-2 rounded" : ""}`} key={index} onClick={()=>setSize(item)} >{item}</button>)
                             })}
                         </div>
                         <button onClick={()=>addToCart(productData._id, size)} className={`bg-black text-white px-8

@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Collection from "./pages/Collection.jsx";
 import About from "./pages/About.jsx";
@@ -10,25 +10,28 @@ import PlaceOrder from "./pages/PlaceOrder.jsx";
 import Orders from "./pages/Orders.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import {ToastContainer, toast} from "react-toastify";
+import {ToastContainer} from "react-toastify";
+import {useContext} from "react";
+import {ShopContext} from "./context/ShopContext.jsx";
 
 function App() {
-
+  const {isLoggedIn} = useContext(ShopContext);
   return (
     <>
       <div className="App">
         <ToastContainer/>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/collections" element={<Collection/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/product/:productId" element={<Product/>} />
+          {}
+          <Route path="/" element={!isLoggedIn? <Login/> : <Home/>} />
+          <Route path="/collections" element={!isLoggedIn? <Login/> : <Collection/>} />
+          <Route path="/about" element={!isLoggedIn? <Login/> : <About/>} />
+          <Route path="/contact" element={!isLoggedIn? <Login/> : <Contact/>} />
+          <Route path="/product/:productId" element={!isLoggedIn? <Login/> : <Product/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/cart" element={<Cart/>} />
-          <Route path="/place-order" element={<PlaceOrder/>} />
-          <Route path="/orders" element={<Orders/>} />
+          <Route path="/cart" element={!isLoggedIn? <Login/> : <Cart/>} />
+          <Route path="/place-order" element={!isLoggedIn? <Login/> : <PlaceOrder/>} />
+          <Route path="/orders" element={!isLoggedIn? <Login/> : <Orders/>} />
         </Routes>
         <Footer/>
       </div>

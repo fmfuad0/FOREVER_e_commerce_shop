@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
-/*body{*/
-/*    background: #c799aa;*/
-/*}*/
+body{
+    background: #dcd6ce;
+}
 
 a.active hr{
     display: block;

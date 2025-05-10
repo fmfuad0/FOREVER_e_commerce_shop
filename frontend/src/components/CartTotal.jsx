@@ -7,7 +7,7 @@ function CartTotal(props) {
     return (
         <div>
             <div className={`text-2xl mb-3 text-center`}>
-                <Title text1={"YOUR"} text2={"CART"}/>
+                <Title text1={props.text1 || "YOUR"} text2={props.text2 || "CART"}/>
             </div>
             <div className={`flex flex-col gap-2 mt-2 text-medium font-semibold`}>
                 <div className={`flex justify-between py-2  border-b border-gray-500`}>
