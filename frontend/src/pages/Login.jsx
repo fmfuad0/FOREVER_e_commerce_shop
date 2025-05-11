@@ -17,7 +17,7 @@ function Login(props) {
         e.preventDefault();
         console.log(currentState);
         if(currentState === "Login"){
-            const res = await fetch("http://localhost:3000/login", {
+            const res = await fetch("https://forever-e-commerce-shop.onrender.com/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

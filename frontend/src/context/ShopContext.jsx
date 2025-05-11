@@ -11,7 +11,7 @@ const ShopContextProvider = (props) => {
     const deliveryFee = 10
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({"aaaac": { "L": 1, "XL": 1, "S": 1 }});
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
     const addToCart = (itemId, size) => {
         if(!size){

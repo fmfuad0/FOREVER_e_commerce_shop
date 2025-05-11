@@ -74,7 +74,7 @@ function Collection(props) {
                 <div className="min-w-[200px] sm:w-1/4">
                     <p onClick={() => setShowFilter(!showFilter)}
                        className="my-2 text-xl flex items-center cursor-pointer gap-2">
-                        FILTERS+{filteredProducts.length}+{showSearch.toString()}
+                        {/*FILTERS+{filteredProducts.length}+{showSearch.toString()}*/}
                         <img
                             className={`h-4 transition-transform ${showFilter ? 'rotate-90' : ''} sm:hidden`}
                             src={assets.dropdown_icon}
