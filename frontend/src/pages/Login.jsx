@@ -62,7 +62,7 @@ function Login(props) {
                 </div>
 
                 <button onClick={onSubmit} type={"submit"} className={`text-semibold bg-black text-white px-8 py-3 text-sm active:bg-gray-700 cursor-pointer tracking-[5px]`} >{currentState.toUpperCase()}</button>
-                Click login to enter.Username and password are not needed.<br/>First login may take some time.Pleas click login and wait or come back after 15 to 20 sec .
+                <span className="text-red-900">Click login to enter.</span><br/><span className="text-green-900">Username and password are not needed.</span><br/>First login may take some time.Please click login and wait or come back after 15 to 20 sec .
             </form>
 
         </div>
