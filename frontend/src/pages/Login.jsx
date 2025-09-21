@@ -62,6 +62,7 @@ function Login(props) {
                 </div>
 
                 <button onClick={onSubmit} type={"submit"} className={`text-semibold bg-black text-white px-8 py-3 text-sm active:bg-gray-700 cursor-pointer tracking-[5px]`} >{currentState.toUpperCase()}</button>
+                Click login to enter.
             </form>
 
         </div>
