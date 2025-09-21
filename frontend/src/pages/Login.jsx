@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import {useContext} from "react";
 import {ShopContext} from "../context/ShopContext.jsx";
@@ -12,6 +12,8 @@ function Login(props) {
     const navigate = useNavigate();
     const context = useContext(ShopContext);
     const {setIsLoggedIn}=context;
+
+    
 
     const onSubmit =async (e) => {
         e.preventDefault();
@@ -37,6 +39,11 @@ function Login(props) {
         }
     }
 
+    useEffect(()=>{
+        setUsername("fmfuad");
+        setPassword("pass");
+    })
+    
     return (
         <div>
             <form className={`flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-15 gap-4 text-gray-800 `}  autoComplete={(currentState!=="Login")? "off":"on"}>
